@@ -4,7 +4,7 @@ int main()
 {   int n,bt[20],wt[20],tat[20],avwt=0,avtat=0,i,j;
     cout<<"Enter total number of processes(maximum 20):";
     cin>>n;
-
+ 
     cout<<"\nEnter Process Burst Time aka DURATION \n";
     for(i=0;i<n;i++)
     {
@@ -32,8 +32,6 @@ int main()
     avtat/=i;
     cout<<"\n\nAverage Waiting Time:"<<avwt;
     cout<<"\nAverage Turnaround Time:"<<avtat;
-
+ 
     return 0;
 }
-
-
