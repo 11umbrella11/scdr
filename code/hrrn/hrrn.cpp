@@ -78,9 +78,7 @@ int main(){
         int sum=0;
         float avr=0;
         for(int i=0;i<pn;i++){
-          
             sum+=wt[i];
-          cout<<sum;
         }
         avr=sum/pn;
         //평균 대기시간은 모든 대기시간을 합쳐서 프로세스의 나눈 정수값만을 도출
