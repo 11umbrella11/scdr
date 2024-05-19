@@ -37,7 +37,7 @@ int main(){
             //초기 대기시간은 0으로 고정합니다.
             at[i]=0;
         }
-        
+
         if(i>0){
             burst+=bt[i-1];   
             wtt=burst-arr;
@@ -47,15 +47,15 @@ int main(){
         else
             wt[0]=0;
     }
-    
-    
+
+
     Ratio r;//클래스 객체 생성
     for(int i =0;i<pn;i++){
         //클래스의 Response함수를 사용
         tt[i]=r.Response(wt[i], bt[i]);
     }
 
- 
+
         cout<<"----1. BURST TIME----"<<endl;
         for(int i=0; i<pn;i++){
             cout<<"p["<<i+1<<"]="<<bt[i]<<endl;                
@@ -64,22 +64,33 @@ int main(){
         for(int i=0;i<pn;i++){
             cout<<"p["<<i+1<<"]="<<at[i]<<endl;
         } 
-        
+
         cout<<"----3. WAITING TIME----"<<endl;
         for(int i=0;i<pn;i++){
             cout<<"p["<<i+1<<"]="<<wt[i]<<endl;
         } 
-        
+
         cout<<"----4.TURNAROUND TIME----"<<endl;
         for(int i=0;i<pn;i++){
             cout<<"p["<<i+1<<"]="<<tt[i]<<endl;
         } 
-        
-  
+        cout<<"----5.AVERAGE WAITING TIME----"<<endl;
+        int sum=0;
+        float avr=0;
+        for(int i=0;i<pn;i++){
+          
+            sum+=wt[i];
+          cout<<sum;
+        }
+        avr=sum/pn;
+        //평균 대기시간은 모든 대기시간을 합쳐서 프로세스의 나눈 정수값만을 도출
+        cout<<"average of waiting time: "<<avr<<endl;
+
+
     /*
     bool run = true;
     while (run){ 
-        
+
         cout<<"====select the menu===="<<endl;
         cout<<"1. check the bursttime"<<endl;
         cout<<"2. check the arrive time"<<endl;
@@ -127,5 +138,5 @@ int main(){
             break;
         }
     }*/
-    
+
 }
