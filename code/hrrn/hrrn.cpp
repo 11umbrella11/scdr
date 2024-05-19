@@ -10,7 +10,7 @@ public:
 };
 
 int main(){
-    int /*inp,*/ pn, arr ,burst, bt[100], at[100], wt[100];
+    int /*inp,*/ pn, wtt, arr ,burst, bt[100], at[100], wt[100];
     double tt[100];
     cout<<"Enter the precess number: ";
     //프로세스의 갯수를 입력받는다.
@@ -21,7 +21,7 @@ int main(){
     for(int i=0;i<pn;i++){
         cin >> bt[i];
     }
-    burst=bt[0];
+    burst=0;
     //후의 대기시간 계산시 이용하기위한 변수생성
 
     cout<<"Enter the arrive time of each process(first one is fixed to 0):";
@@ -39,8 +39,9 @@ int main(){
         }
         
         if(i>0){
-            burst+=bt[i-1];
-            wt[i]=burst-arr;
+            burst+=bt[i-1];   
+            wtt=burst-arr;
+            wt[i]=abs(wtt);
             //대기시간은 '이전 버스트가 끝나는 시간-도착시간'이다.
         }
         else
