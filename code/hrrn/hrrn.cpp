@@ -5,7 +5,7 @@ class Ratio{
 public:
     double Response(int wt, int bt){
         //response ratio를 계산하는 함수
-        return (wt+bt)/bt;
+        return (double)(wt+bt)/bt;
     }
 };
 
