@@ -110,11 +110,12 @@ int main(){
               avr=sum/pn;
               //평균 대기시간은 모든 대기시간을 합쳐서 프로세스의 나눈 정수값만을 도출
               cout<<"average of waiting time: "<<avr<<endl;
+          break;
 
-            case 6:
+          case 6:
                 cout<<"----5. EXIT----"<<endl;
                 run = false;
-            break;
+          break;
         }
     }
 
