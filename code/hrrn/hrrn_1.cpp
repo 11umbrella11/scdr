@@ -113,8 +113,9 @@ int main(){
           break;
 
           case 6:
-                cout<<"----5. EXIT----"<<endl;
+                cout<<"----6. EXIT----"<<endl;
                 run = false;
+                cout<<"----EXIT----"<<endl;
           break;
         }
     }
